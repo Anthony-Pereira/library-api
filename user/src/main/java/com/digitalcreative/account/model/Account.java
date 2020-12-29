@@ -1,15 +1,13 @@
-package com.digitalcreative.user.model;
+package com.digitalcreative.account.model;
 
 import lombok.Data;
-import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 
 @Data
-@Component
 @Entity
-@Table(name = "user")
-public class User {
+@Table(name = "account")
+public class Account {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

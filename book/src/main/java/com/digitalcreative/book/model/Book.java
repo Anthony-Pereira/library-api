@@ -1,12 +1,10 @@
 package com.digitalcreative.book.model;
 
 import lombok.Data;
-import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 
 @Data
-@Component
 @Entity
 @Table(name = "book")
 public class Book {

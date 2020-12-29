@@ -1,10 +1,10 @@
-package com.digitalcreative.user;
+package com.digitalcreative.account;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class UserApplicationTests {
+class AccountApplicationTests {
 
     @Test
     void contextLoads() {

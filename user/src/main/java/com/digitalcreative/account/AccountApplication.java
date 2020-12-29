@@ -1,13 +1,13 @@
-package com.digitalcreative.user;
+package com.digitalcreative.account;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class UserApplication {
+public class AccountApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(UserApplication.class, args);
+        SpringApplication.run(AccountApplication.class, args);
     }
 
 }
