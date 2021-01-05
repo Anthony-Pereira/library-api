@@ -50,7 +50,7 @@ public class AccountController {
     /**
      * Update - Update an existing account
      * @param id - The id of the account to update
-         * @param account - The account object updated
+     * @param account - The account object updated
      * @return
      */
     @PutMapping("/account/{id}")
@@ -74,6 +74,10 @@ public class AccountController {
             String password = account.getPassword();
             if(password != null) {
                 currentAccount.setPassword(password);;
+            }
+            String phone = account.getPhone();
+            if(phone != null) {
+                currentAccount.setPhone(phone);;
             }
             accountService.saveAccount(currentAccount);
             return currentAccount;
