@@ -68,7 +68,7 @@ public class BookController {
             if(author != null) {
                 currentBook.setAuthor(author);;
             }
-            String type = book.getType();
+            Integer type = book.getType();
             if(type != null) {
                 currentBook.setType(type);
             }
