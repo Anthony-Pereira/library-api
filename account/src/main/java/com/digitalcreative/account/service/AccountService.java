@@ -19,6 +19,10 @@ public class AccountService {
         return accountRepository.findById(id);
     }
 
+    public Optional<Account> getAccount(final String email) {
+        return accountRepository.findByEmail(email);
+    }
+
     public Iterable<Account> getAccounts() {
         return accountRepository.findAll();
     }

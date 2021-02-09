@@ -39,6 +39,21 @@ public class AccountController {
     }
 
     /**
+     * Read - Get one account
+     * @param email The email of the account
+     * @return An account object full filled
+     */
+    @GetMapping("/account/{email}")
+    public Account getAccount(@PathVariable("email") final String email) {
+        Optional<Account> account = accountService.getAccount(email);
+        if(account.isPresent()) {
+            return account.get();
+        } else {
+            return null;
+        }
+    }
+
+    /**
      * Read - Get all accounts
      * @return - An Iterable object of account full filled
      */
@@ -77,6 +92,10 @@ public class AccountController {
             }
             String phone = account.getPhone();
             if(phone != null) {
+                currentAccount.setPhone(phone);;
+            }
+            Integer role = account.getRole();
+            if(role != null) {
                 currentAccount.setPhone(phone);;
             }
             accountService.saveAccount(currentAccount);
